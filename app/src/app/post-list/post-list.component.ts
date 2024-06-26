@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post-list',
@@ -13,7 +14,7 @@ export class PostListComponent implements OnInit {
   posts: any[] = [];
   users: any[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {
     this.fetchPosts();
@@ -46,5 +47,9 @@ export class PostListComponent implements OnInit {
         }
       });
     }
+  }
+
+  navigateToPostDetails(postId: number) {
+    this.router.navigate(['/post', postId]);
   }
 }

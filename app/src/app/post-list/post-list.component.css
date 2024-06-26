@@ -23,3 +23,26 @@ p{
     background-color: white;;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
+select{
+    padding: 5px;
+    margin-left: 10px;
+}
+.user-selection{
+    padding: 10px;
+    align-items: end;
+    display: inline-block;
+}
+.total-posts{
+    text-align: right;
+    margin: 20px;
+    float: right;
+}
+.sort {
+    display: inline-block;
+    text-align: center;
+    margin-left: 100px;
+}
+button {
+    margin: auto 10px;
+    padding: 5px;
+}

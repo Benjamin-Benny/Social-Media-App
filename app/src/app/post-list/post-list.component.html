@@ -1,6 +1,28 @@
-<div class="each-post" *ngFor="let post of posts" (click)="navigateToPostDetails(post.id)">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.body }}</p>
-    <p>Author: {{ post.userName }}</p>
-  </div>
-  
+
+
+<div class="user-selection">
+  <label for="user-select">Select User: </label>
+  <select id="user-select" (change)="filterPostsByUser($event)">
+    <option value="">All Users</option>
+    <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+  </select>
+</div>
+
+<div class="sort">
+  <button (click)="sortPosts('asc')">Sort by Title Ascending</button>
+  <button (click)="sortPosts('desc')">Sort by Title Descending</button>
+</div>
+
+<div class="total-posts">
+  Total Posts: {{ filteredPosts.length }}
+</div>
+
+<div
+  class="each-post"
+  *ngFor="let post of filteredPosts"
+  (click)="navigateToPostDetails(post.id)"
+>
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.body }}</p>
+  <p>Author: {{ post.userName }}</p>
+</div>

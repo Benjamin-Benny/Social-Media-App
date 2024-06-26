@@ -1,4 +1,5 @@
-<div *ngIf="post">
+<div class="outer-div">
+<div class="post" *ngIf="post">
     <h2>{{ post.title }}</h2>
     <p>{{ post.body }}</p>
   </div>
@@ -6,28 +7,28 @@
   <div class="user-details-container" *ngIf="user">
     <div class="user-details">
       <h3>Author Details</h3>
-      <p><strong>Name:</strong> {{ user.name }}</p>
-      <p><strong>Username:</strong> {{ user.username }}</p>
-      <p><strong>Email:</strong> <a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
-      <p><strong>Phone:</strong> {{ user.phone }}</p>
-      <p><strong>Website:</strong> <a href="http://{{ user.website }}" target="_blank">{{ user.website }}</a></p>
+      <p><strong>Name: </strong> {{ user.name }}</p>
+      <p><strong>Username: </strong> {{ user.username }}</p>
+      <p><strong>Email: </strong> <a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
+      <p><strong>Phone: </strong> {{ user.phone }}</p>
+      <p><strong>Website: </strong> <a href="http://{{ user.website }}" target="_blank">{{ user.website }}</a></p>
     </div>
     
     <div class="address">
-      <h4>Address</h4>
+      <h3>Address</h3>
       <p>{{ user.address?.street }}, {{ user.address?.suite }}</p>
       <p>{{ user.address?.city }}, {{ user.address?.zipcode }}</p>
     </div>
   
     <div class="company">
-      <h4>Company</h4>
-      <p><strong>Name:</strong> {{ user.company?.name }}</p>
-      <p><strong>CatchPhrase:</strong> {{ user.company?.catchPhrase }}</p>
-      <p><strong>BS:</strong> {{ user.company?.bs }}</p>
+      <h3>Company</h3>
+      <p><strong>Name: </strong> {{ user.company?.name }}</p>
+      <p><strong>CatchPhrase: </strong> {{ user.company?.catchPhrase }}</p>
+      <p><strong>BS: </strong> {{ user.company?.bs }}</p>
     </div>
   </div>
   
-  <div *ngIf="comments.length">
+  <div class="comments" *ngIf="comments.length">
     <h3>Comments</h3>
     <ul>
       <li *ngFor="let comment of comments">
@@ -36,4 +37,4 @@
       </li>
     </ul>
   </div>
-  
+</div>

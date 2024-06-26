@@ -1,24 +1,25 @@
 .each-post{
-    background-color: #FDFFE2;
+    background-color: #F8F4E1;
     margin: 10px 0;
     padding: 5px 10px 10px 15px;
-    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 h2{
-    color: #5A72A0;
+    color: #543310;
 }
 p{
-    color: #1A2130;
+    color: black;
 }
 .each-post {
     cursor: pointer;
-    border: 1px solid #F9FFAF;
+    border: 2px solid #A67B5B;
+    border-radius: 20px;
     padding: 16px;
     margin: 8px 0;
     transition: background-color 0.3s;
   }
   
   .each-post:hover {
-    background-color: #F9FFAF;
+    background-color: white;;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
-  

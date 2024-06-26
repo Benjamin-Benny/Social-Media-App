@@ -48,6 +48,7 @@ export class PostDetailsComponent implements OnInit {
   fetchUser(userId: number) {
     this.apiService.getUserById(userId).subscribe(user => {
       this.user = user;
+      console.log(user);
     });
   }
 

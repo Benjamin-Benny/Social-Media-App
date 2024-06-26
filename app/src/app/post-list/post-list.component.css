@@ -10,3 +10,15 @@ h2{
 p{
     color: #1A2130;
 }
+.each-post {
+    cursor: pointer;
+    border: 1px solid #F9FFAF;
+    padding: 16px;
+    margin: 8px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .each-post:hover {
+    background-color: #F9FFAF;
+  }
+  

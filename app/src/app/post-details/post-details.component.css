@@ -1,0 +1,28 @@
+.user-details-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .user-details, .address, .company {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  
+  .user-details h3, .address h4, .company h4 {
+    margin-top: 0;
+  }
+  
+  .user-details a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .user-details a:hover {
+    text-decoration: underline;
+  }
+  

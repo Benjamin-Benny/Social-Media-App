@@ -24,6 +24,7 @@ export class PostListComponent implements OnInit {
   fetchPosts() {
     this.apiService.getPosts().subscribe((posts: any[]) => {
       this.posts = posts;
+      console.log(this.posts);
       this.posts.forEach(post => {
         post.userName = '';
       });
@@ -50,6 +51,7 @@ export class PostListComponent implements OnInit {
   }
 
   navigateToPostDetails(postId: number) {
-    this.router.navigate(['/post', postId]);
+    console.log("inside navigate function")
+    this.router.navigate(['/posts/', postId]);
   }
 }

@@ -25,11 +25,9 @@ export class PostDetailsComponent implements OnInit {
         this.fetchPost(postId);
         this.fetchComments(postId);
       } else {
-        // Handle the case where postId is not a valid number
         console.error('Invalid post ID');
       }
     } else {
-      // Handle the case where postIdParam is null or undefined
       console.error('Post ID not found in route parameters');
     }
   }

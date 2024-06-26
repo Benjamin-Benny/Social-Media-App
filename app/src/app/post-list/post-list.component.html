@@ -1,1 +1,7 @@
-<p>post-list works!</p>
+<div class="each posts" *ngFor="let post of posts">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    <p>Author: {{ post.userName }}</p>
+    <!-- <a [routerLink]="['/post', post.id]">View Details</a> -->
+  </div>
+  
